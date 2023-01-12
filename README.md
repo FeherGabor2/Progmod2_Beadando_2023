@@ -1,5 +1,9 @@
 # Progmod2_Beadando_2023
 
+**A program célja**
+
+A program munkások tárolására, törlésére és szerekesztésére szolgál, ami egy raklap gyártó cég munkáját segíti. Emelett a program alkalmas még raklap megrendelések felvételére tárolására és azok szerkesztésére. Mysql adatbázist és Springboot keretrendszert használunk.
+
 Package-ek
 -----
 
@@ -76,10 +80,48 @@ Ebben a packageben egyetlen osztály található ami a Nationality enum. Ezzel a
 
 **Models**
 
-* Palettes
+Ez a package tartalmazza az összes olyan osztályt és metódust melyek az adatok változtatásához és a Controller réteg által küldött kérések kiszolgálásához szükséges.
 
-* Workers
+***Palettes***
+
+Az egyik fő entitás osztály amely meghatározza a paletta fő adatait. Tartoznak hozzá szükséges getterek és setterek is.
+
+Attributumai:
+* String gyarto - Adott raklapcsomag megrendelője
+* String meret - Adott raklap méretei
+* String szin - Adott raklap színe
+* Integer suly - Egy raklap súlya
+* Integer teherbiras - Egy raklap teherbírása
+
+***Workers***
+
+Az egyik fő entitás osztály amely meghatározza a dolgozó fő adatait. Tartoznak hozzá szükséges getterek és setterek is.
+
+Attributumai:
+* String firstname - A dolgozó keresztneve
+* String lastname - A dolgozó vezetékneve
+* String position - A gyárban betöltött poziciója
+* Integer age - A dolgozó kora
+* Enum nationality - A dolgozó származása
+* Integer palettes - A dolgozó mennyi raklapot gyártott
 
 -----
 
 **Repo**
+
+Egyetlen osztályt tartalmaz ami a RestApiApplication, ez felel a program futtatásáért.
+
+-----
+
+**Adatbázis**
+
+Itt vannak a dolgozók és a paletták adatai külön-külön tárolva
+
+***Worker***
+Egy adatbázis mely a dolgozó adatait tárolja el amelyeket a modell osztályban bemutattunk
+
+![workers](https://user-images.githubusercontent.com/118485894/212169580-cb8293e4-dc45-4f68-83d4-4d23d1123a9e.png)
+
+
+***Palettes***
+Egy adatbázis mely a paletta adatait tárolja el amelyeket a modell osztályban bemutattunk.
