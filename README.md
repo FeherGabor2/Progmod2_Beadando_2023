@@ -125,3 +125,5 @@ Egy adatbázis mely a dolgozó adatait tárolja el amelyeket a modell osztályba
 
 ***Palettes***
 Egy adatbázis mely a paletta adatait tárolja el amelyeket a modell osztályban bemutattunk.
+
+![palettes](https://user-images.githubusercontent.com/118485894/212278415-aba946ff-e59e-4d4f-8806-d1de2013235d.png)
